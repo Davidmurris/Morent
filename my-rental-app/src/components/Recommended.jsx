@@ -1,6 +1,107 @@
 import CarCard from "./CarCard";
 
 function Recommended() {
+  function handleRent(){
+    console.log('Car rental button clicked!');
+  }
+
+   const cars = [
+         {
+           onRent: {handleRent},
+           name:"All New Rush",
+           price: "$80.00", 
+           category: "SUV",
+           fuel: '70L',
+           passengers: '6 People',
+           slash_price: "$100",
+           image:"/images/P3.png",
+
+         } ,
+
+         {
+           name:"CR-V", 
+           price: "$80.00", 
+           category: "SUV",
+           fuel: '80L',
+           passengers: '6 People',
+           image: "/images/P4.png"
+
+         },
+
+         {
+            name:"All New Terios", 
+           price: "$74.00", 
+           category: "SUV",
+           fuel: '74L',
+           passengers: '6 People',
+           image: "/images/P5.png"
+           
+         },
+
+         {
+            name:"CR-V" ,
+           price: "$80.00" ,
+           category: "SUV",
+           fuel: '74L',
+           passengers: '6 People',
+           image: "/images/P6.png"
+         },
+
+         {
+          name: " MG ZS Exclusice", 
+           price: "$76.00", 
+           category: "Hatchback",
+           fuel: '70L',
+           passengers: '4 People',
+           slash_price: "$80",
+           image: "/images/P7.png"
+         },
+
+         {
+           name: "New MG ZS", 
+           price: "$80.00", 
+           category: "SUV",
+           fuel: '80L',
+           passengers: '6 People',
+           image: "/images/P8.png"
+         },
+
+         {
+             name: " MG ZS Excite", 
+           price: "$74.00", 
+           category: "Hatchback",
+           fuel: '90L',
+           passengers: '4 People',
+           slash_price: "$80",
+           image: "/images/P7.png"
+         },
+
+         {
+           name: "New MG ZS", 
+           price: "$80.00", 
+           category: "SUV",
+           fuel: '80L',
+           passengers: '6 People',
+           image: "/images/P9.png"
+         }
+           
+            ]
+
+            const carsElements = cars.map((car, index) => {
+              return (
+                <CarCard 
+                  onRent={handleRent}
+                  key={index}
+                  name={car.name}
+                  price={car.price}
+                  category={car.category}
+                  fuel={car.fuel}
+                  passengers={car.passengers}
+                  image={car.image}
+                  slash_price={car.slash_price}
+                />
+              );
+            });
 
    
     
@@ -12,94 +113,35 @@ function Recommended() {
             </div>
 
             
-            {/* recommendation car cards */}
+           
 
-           <CarCard 
-           name="All New Rush" 
-           price= "$80.00" 
-           category= "SUV"
-           fuel= '70L'
-           passengers= '6 People'
-           slash_price= "$100"
-           image="/images/P3.png"
-           />
-
-
-             {/* Recommended car cards */}
-            <CarCard 
-           name="CR-V" 
-           price= "$80.00" 
-           category= "SUV"
-           fuel= '80L'
-           passengers= '6 People'
-           image="/images/P4.png"
-           />
+           
+            {carsElements}
+            {/* Recommended car cards */}
+           
             {/* Recommended car cards */}
 
-           <CarCard 
-           name="All New Terios" 
-           price= "$74.00" 
-           category= "SUV"
-           fuel= '74L'
-           passengers= '6 People'
-           image="/images/P5.png"
-           />
+           
 
             {/* Recommended car cards */}
-            <CarCard 
-           name="CR-V" 
-           price= "$80.00" 
-           category= "SUV"
-           fuel= '74L'
-           passengers= '6 People'
-           image="/images/P6.png"
-           />
+           
+           
 
              {/* recommendation car cards */}
 
-             <CarCard 
-           name=" MG ZS Exclusice" 
-           price= "$76.00" 
-           category= "Hatchback"
-           fuel= '70L'
-           passengers= '4 People'
-           slash_price= "$80"
-           image="/images/P7.png"
-           />
-
+            
             {/* Recommended car cards */}
-            <CarCard 
-           name="New MG ZS" 
-           price= "$80.00" 
-           category= "SUV"
-           fuel= '80L'
-           passengers= '6 People'
-           image="/images/P8.png"
-           />
+          
+           
             {/* Recommended car cards */}
 
-                 <CarCard 
-           name=" MG ZS Excite" 
-           price= "$74.00" 
-           category= "Hatchback"
-           fuel= '90L'
-           passengers= '4 People'
-           slash_price= "$80"
-           image="/images/P7.png"
-           />
+           
+           
 
 
            
-            {/* Recommended car cards */}
-              <CarCard 
-           name="New MG ZS" 
-           price= "$80.00" 
-           category= "SUV"
-           fuel= '80L'
-           passengers= '6 People'
-           image="/images/P9.png" />
 
-             {/* Show more cars section */}
+             {/* more cars section */}
 <div className="relative flex justify-center items-center mt-8 mb-4 col-span-full">
 
   <button

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Fuel, Settings2, Users} from "lucide-react";
 
 function CarCard(props){
+   
     const [favorite, setfavorite]= useState(false)
     return (
          <div className="Recommended-car-card bg-white rounded-xl p-4 shadow-sm ">
@@ -43,7 +44,7 @@ function CarCard(props){
                     <span className="text-l text-gray-300 line-through">{props.slash_price}</span>
                     </div>
 
-                    <button className="bg-blue-600 hover:bg-blue-800 text-white font-normal py-2 px-4 rounded-lg cursor-pointer">
+                    <button onClick={props.onRent} className="bg-blue-600 hover:bg-blue-800 text-white font-normal py-2 px-4 rounded-lg cursor-pointer">
                         Rent Now
                     </button>
 
