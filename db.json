@@ -1,0 +1,91 @@
+
+{ 
+    "cars" : [
+         {
+            "id": 1,
+           "name":"All New Rush",
+           "price": "$80.00", 
+           "category": "SUV",
+           "fuel": "70L",
+           "passengers": "6 People",
+           "slash_price": "$100",
+           "image":"/images/P3.png"
+
+         } ,
+
+         {
+            "id": 2,
+           "name":"CR-V", 
+           "price": "$80.00", 
+           "category": "SUV",
+           "fuel": "80L",
+           "passengers": "6 People",
+           "image": "/images/P4.png"
+
+         },
+
+         {
+            "id": 3,
+            "name":"All New Terios", 
+           "price": "$74.00", 
+           "category": "SUV",
+           "fuel": "74L",
+           "passengers": "6 People",
+           "image": "/images/P5.png"
+           
+         },
+
+         {
+            "id": 4,
+            "name":"CR-V" ,
+           "price": "$80.00" ,
+           "category": "SUV",
+           "fuel": "74L",
+           "passengers": "6 People",
+           "image": "/images/P6.png"
+         },
+
+         {
+            "id": 5,
+            "name": " MG ZS Exclusice", 
+           "price": "$76.00", 
+           "category": "Hatchback",
+           "fuel": "70L",
+           "passengers": "4 People",
+           "slash_price": "$80",
+           "image": "/images/P7.png"
+         },
+
+         {
+            "id": 6,
+           "name": "New MG ZS", 
+           "price": "$80.00", 
+           "category": "SUV",
+           "fuel": "80L",
+           "passengers": "6 People",
+           "image": "/images/P8.png"
+         },
+
+         {
+            "id": 7,
+             "name": " MG ZS Excite", 
+           "price": "$74.00", 
+           "category": "Hatchback",
+           "fuel": "90L",
+           "passengers": "4 People",
+           "slash_price": "$80",
+           "image": "/images/P7.png"
+         },
+
+         {
+            "id": 8,
+           "name": "New MG ZS", 
+           "price": "$80.00", 
+           "category": "SUV",
+           "fuel": "80L",
+           "passengers": "6 People",
+           "image": "/images/P9.png"
+         }
+           
+    ]
+}

@@ -5,12 +5,14 @@ import RentalOptions from './components/RentalOptions';
 import PopularCars from './components/PopularCars';
 import Recommended from './components/Recommended';
 import Footer from './components/Footer';
-import { useEffect} from 'react';
+import { useEffect, useState} from 'react';
 
 function App() {
   useEffect(() => {
     document.title = "MORENT | Car Rental";
   } , []);
+
+  const [count, setCount] = useState(0);
 
  
 

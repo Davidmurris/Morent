@@ -1,91 +1,28 @@
 import CarCard from "./CarCard";
+import { useState } from "react";
+import { useEffect } from "react";
+import useFetch from "../hooks/useFetch";
 
 function Recommended() {
+  const { data: cars, loading, error } = useFetch(
+  "http://localhost:3000/cars"
+);
+
+  
+
+  if (loading) {
+    return <p>Loading cars...</p>
+  }
+
+  if (error) {
+    return <p>{error}</p>
+  }
+
   function handleRent(){
     console.log('Car rental button clicked!');
   }
 
-   const cars = [
-         {
-           onRent: {handleRent},
-           name:"All New Rush",
-           price: "$80.00", 
-           category: "SUV",
-           fuel: '70L',
-           passengers: '6 People',
-           slash_price: "$100",
-           image:"/images/P3.png",
-
-         } ,
-
-         {
-           name:"CR-V", 
-           price: "$80.00", 
-           category: "SUV",
-           fuel: '80L',
-           passengers: '6 People',
-           image: "/images/P4.png"
-
-         },
-
-         {
-            name:"All New Terios", 
-           price: "$74.00", 
-           category: "SUV",
-           fuel: '74L',
-           passengers: '6 People',
-           image: "/images/P5.png"
-           
-         },
-
-         {
-            name:"CR-V" ,
-           price: "$80.00" ,
-           category: "SUV",
-           fuel: '74L',
-           passengers: '6 People',
-           image: "/images/P6.png"
-         },
-
-         {
-          name: " MG ZS Exclusice", 
-           price: "$76.00", 
-           category: "Hatchback",
-           fuel: '70L',
-           passengers: '4 People',
-           slash_price: "$80",
-           image: "/images/P7.png"
-         },
-
-         {
-           name: "New MG ZS", 
-           price: "$80.00", 
-           category: "SUV",
-           fuel: '80L',
-           passengers: '6 People',
-           image: "/images/P8.png"
-         },
-
-         {
-             name: " MG ZS Excite", 
-           price: "$74.00", 
-           category: "Hatchback",
-           fuel: '90L',
-           passengers: '4 People',
-           slash_price: "$80",
-           image: "/images/P7.png"
-         },
-
-         {
-           name: "New MG ZS", 
-           price: "$80.00", 
-           category: "SUV",
-           fuel: '80L',
-           passengers: '6 People',
-           image: "/images/P9.png"
-         }
-           
-            ]
+   
 
             const carsElements = cars.map((car, index) => {
               return (
